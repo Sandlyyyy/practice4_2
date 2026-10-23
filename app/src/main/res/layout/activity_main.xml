@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#0B0C10"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:id="@+id/panelNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        android:background="#1F2833"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/frameContainer">
+
+        <Button
+            android:id="@+id/btnBridge"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:backgroundTint="#45A29E"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:onClick="onBridgeClick"
+            android:text="@string/btn_loc1"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnLab"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:backgroundTint="#45A29E"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:onClick="onLabClick"
+            android:text="@string/btn_loc2"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnSpacewalk"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:backgroundTint="#45A29E"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:onClick="onSpacewalkClick"
+            android:text="@string/btn_loc3"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnCabin"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:backgroundTint="#45A29E"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:onClick="onCabinClick"
+            android:text="@string/btn_loc4"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/panelNavigation">
+
+        <ImageView
+            android:id="@+id/imgCabin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/loc_cabin" />
+
+        <ImageView
+            android:id="@+id/imgSpace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/loc_space" />
+
+        <ImageView
+            android:id="@+id/imgLab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/loc_lab" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutBridge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imgBridge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/loc_bridge" />
+
+            <Button
+                android:id="@+id/zoneWindow"
+                android:layout_width="220dp"
+                android:layout_height="64dp"
+                android:backgroundTint="#991F2833"
+                android:onClick="onItemWindowClick"
+                android:text="Иллюминатор"
+                android:textColor="#66FCF1"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.12" />
+
+            <Button
+                android:id="@+id/zoneMainComputer"
+                android:layout_width="170dp"
+                android:layout_height="80dp"
+                android:backgroundTint="#991F2833"
+                android:onClick="onItemComputerClick"
+                android:text="Бортовой ПК"
+                android:textColor="#66FCF1"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.42" />
+
+            <Button
+                android:id="@+id/zoneRadar"
+                android:layout_width="130dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="#991F2833"
+                android:onClick="onItemRadarClick"
+                android:text="Антенна связи"
+                android:textColor="#66FCF1"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.68" />
+
+            <Button
+                android:id="@+id/zoneSuit"
+                android:layout_width="130dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="#991F2833"
+                android:onClick="onItemSuitClick"
+                android:text="Скафандр EVA"
+                android:textColor="#66FCF1"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.68" />
+
+            <Button
+                android:id="@+id/zoneCoffee"
+                android:layout_width="150dp"
+                android:layout_height="56dp"
+                android:backgroundTint="#991F2833"
+                android:onClick="onItemCoffeeClick"
+                android:text="Термокружка"
+                android:textColor="#66FCF1"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/zoneMainComputer"
+                app:layout_constraintVertical_bias="0.78" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

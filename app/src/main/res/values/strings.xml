@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SpaceStation</string>
+    <string name="btn_loc1">Мостик</string>
+    <string name="btn_loc2">Лаборатория</string>
+    <string name="btn_loc3">Космос</string>
+    <string name="btn_loc4">Каюта</string>
+</resources>
